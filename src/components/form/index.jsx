@@ -64,26 +64,33 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
       console.warn("⚠️ Validation failed");
       return;
     }
-
-   try {
-     console.log("🌐 Sending data to Amplify Lambda...");
-
-     const API_URL = "https://4tm07os0jl.execute-api.ap-south-1.amazonaws.com/prod/items";
+    
+    try {
+    console.log("Sending data to Amplify Lambda...");
+    const API_URL = "https://4tm07os0jl.execute-api.ap-south-1.amazonaws.com/prod/items";
 
     const res = await fetch(API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         ...formData,
-        formType, // ✅ Important for backend
+        formType,
       }),
     });
 
     const result = await res.json();
-    console.log("📨 Zoho API Response:", result);
-    } catch (err) {
-    console.error("🔥 Error sending data:", err); 
+    console.log("Zoho API Response:", result);
+
+    if (result.success) {
+      alert("Thank you! We'll contact you soon.");
+    } else {
+      alert("Error: " + (result.error || "Unknown"));
+    }
+  } catch (err) {
+    console.error("Error sending data:", err);
+    alert("Network error. Please try again.");
   }
+};
 
       if (result.success) {
         setPopupType("success");
@@ -295,4 +302,5 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
     </div>
   );
 }
+
 
