@@ -11,7 +11,7 @@ import Top from "@/assets/img/top.svg";
 import Star from "@/assets/img/star.svg";
 import Background from "@/assets/img/banner.jpg";
 import Mobilebackground from "@/assets/img/mobilebanner.jpg";
-import Ok from "@/assets/img/ok.svg";
+import Ok from "@/assets/img/ok.svg"
 import Company_1 from "@/assets/img/company_1.png";
 import Company_2 from "@/assets/img/company_2.png";
 import Company_3 from "@/assets/img/company_3.png";

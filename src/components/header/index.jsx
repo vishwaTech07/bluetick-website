@@ -88,40 +88,56 @@ export default function Header({ formType, setFormType }) {
 
                         </div>
 
-                        <div className="mr-5 md:block hidden">
-                            <Link href="https://wa.me/9606995525" target="_blank" rel="noopener noreferrer">
-                                <div className="outline-none bg-[#2D2E5A] py-2 px-3 capitalize rounded-full font-[600] text-[15px] text-[#303E6C] flex items-center gap-1">
-                                    <div className="w-[30px] h-[30px]">
-                                        <Image src={Whatapp} layout="responsive" alt="no-image" />
-                                    </div>
-                                    <p className="text-white">+91-9606 9955 25</p>
-                                </div>
-                            </Link>
-                        </div>
-                        <div className="md:block hidden">
-                            <Link href="tel:+919606995525">
-                                <div className="outline-none bg-[#2D2E5A] py-2 px-3 capitalize rounded-full font-[600] text-[15px] text-[#303E6C] flex items-center gap-1">
-                                    <div className="w-[30px] h-[30px]">
-                                        <Image src={Phone} layout="responsive" alt="no-image" />
-                                    </div>
-                                    <p className="text-white">+91-9606 9955 25</p>
-                                </div>
-                            </Link>
+                                            <div className="mr-5 md:block hidden">
+                        {/* ✅ Add className="js-wa-cta" */}
+                        <Link
+                            href="https://wa.me/9606995525"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="js-wa-cta"
+                        >
+                            <div className="outline-none bg-[#2D2E5A] py-2 px-3 capitalize rounded-full font-[600] text-[15px] text-[#303E6C] flex items-center gap-1">
+                            <div className="w-[30px] h-[30px]">
+                                <Image src={Whatapp} layout="responsive" alt="no-image" />
+                            </div>
+                            <p className="text-white">+91-9606 9955 25</p>
+                            </div>
+                        </Link>
                         </div>
 
-                        <div className="mr-1">
-                            <Link href="https://wa.me/9606995525" target="_blank" rel="noopener noreferrer">
-                                <div className="w-[36px] h-[36px] md:hidden block">
-                                    <Image src={Whatapp} layout="responsive" alt="no-image" />
-                                </div>
-                            </Link>
+                        <div className="md:block hidden">
+                        {/* ✅ Add className="js-call-cta" */}
+                        <Link href="tel:+919606995525" className="js-call-cta">
+                            <div className="outline-none bg-[#2D2E5A] py-2 px-3 capitalize rounded-full font-[600] text-[15px] text-[#303E6C] flex items-center gap-1">
+                            <div className="w-[30px] h-[30px]">
+                                <Image src={Phone} layout="responsive" alt="no-image" />
+                            </div>
+                            <p className="text-white">+91-9606 9955 25</p>
+                            </div>
+                        </Link>
                         </div>
+
+                        {/* ✅ Mobile WhatsApp Icon */}
                         <div className="mr-1">
-                            <Link href="tel:+919606995525">
-                                <div className="w-[36px] h-[36px] md:hidden block">
-                                    <Image src={Phone} layout="responsive" alt="no-image" />
-                                </div>
-                            </Link>
+                        <Link
+                            href="https://wa.me/9606995525"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="js-wa-cta"
+                        >
+                            <div className="w-[36px] h-[36px] md:hidden block">
+                            <Image src={Whatapp} layout="responsive" alt="no-image" />
+                            </div>
+                        </Link>
+                        </div>
+
+                        {/* ✅ Mobile Call Icon */}
+                        <div className="mr-1">
+                        <Link href="tel:+919606995525" className="js-call-cta">
+                            <div className="w-[36px] h-[36px] md:hidden block">
+                            <Image src={Phone} layout="responsive" alt="no-image" />
+                            </div>
+                        </Link>
                         </div>
 
                         <div

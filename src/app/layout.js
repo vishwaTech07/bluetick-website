@@ -1,13 +1,14 @@
 // app/layout.js
-import { Source_Sans_3 } from 'next/font/google'
-import './globals.css'
-import Script from 'next/script'
+import { Source_Sans_3 } from 'next/font/google';
+import './globals.css';
+import Script from 'next/script';
+import MetaPixelTracker from '@/components/MetaPixelTracker'; // ✅ Add client component
 
 const sourceSans = Source_Sans_3({
   variable: '--font-source-sans',
   subsets: ['latin'],
   weight: ['300', '400', '600', '700'],
-})
+});
 
 export const metadata = {
   title: 'Digital Marketing Courses in Bangalore – Enroll at BlueTick Academy!',
@@ -16,13 +17,15 @@ export const metadata = {
   icons: {
     icon: '/icon.png',
   },
-}
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Google Tag Manager */}
+        {/* =====================================================
+           ✅ Google Tag Manager
+        ===================================================== */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -33,7 +36,41 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        {/* JSON-LD Schema Markup */}
+        {/* =====================================================
+           ✅ Meta Pixel Base
+        ===================================================== */}
+        <Script id="meta-pixel-base" strategy="afterInteractive">
+          {`
+            if (!window.fbq) {
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+
+              fbq('init', '1197413055574069');
+              fbq('track', 'PageView');
+              console.log('📸 Meta Pixel initialized (base)');
+            }
+          `}
+        </Script>
+
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=1197413055574069&ev=PageView&noscript=1"
+            alt="fb-pixel"
+          />
+        </noscript>
+
+        {/* =====================================================
+           ✅ Schema Markup
+        ===================================================== */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -42,9 +79,7 @@ export default function RootLayout({ children }) {
               "@type": "Organization",
               name: "BlueTick Academy",
               url: "https://bluetickacademy.com/",
-              logo:
-                "https://bluetickacademy.com/_next/static/media/logo.46adcaad.svg",
-              alternateName: "BlueTick Academy",
+              logo: "https://bluetickacademy.com/_next/static/media/logo.46adcaad.svg",
               sameAs: [
                 "https://www.facebook.com/people/BlueTick-Academy/61573772256421/",
                 "https://www.instagram.com/bluetick.academy__/",
@@ -63,8 +98,9 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
+
       <body className={`${sourceSans.variable} antialiased`}>
-        {/* Google Tag Manager (noscript) */}
+        {/* ✅ Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-P2CQPT98"
@@ -74,7 +110,7 @@ export default function RootLayout({ children }) {
           ></iframe>
         </noscript>
 
-        {/* Google Analytics (gtag.js) */}
+        {/* ✅ Inject GA4 */}
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-4VEZHPBX22"
@@ -88,12 +124,17 @@ export default function RootLayout({ children }) {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-4VEZHPBX22');
+              console.log("📊 Google Analytics initialized");
             `,
           }}
         />
 
+        {/* ✅ Client-side Meta Pixel tracking */}
+        <MetaPixelTracker />
+
+        {/* ✅ Page Content */}
         {children}
       </body>
     </html>
-  )
+  );
 }
