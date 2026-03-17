@@ -364,6 +364,13 @@ function HomeClient() {
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-3 md:px-6">
             <div className="grid sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-3 px-3">
               <div>
+                <p className="text-[#ffffff] text-[18px] mb-4 text-center xl:text-start">
+                  Best Digital Marketing Course with {" "}
+                  <strong className="font-[700] md:text-[24px] underline">
+                    {new Date().getFullYear()}
+                  </strong>{" "}
+                  Curriculum{" "}
+                </p>
                 <h2 className="bg-gradient-to-b from-[#FD9055] to-[#FE4855] bg-clip-text text-transparent text-[30px] md:text-[50px] font-[400] md:font-semibold uppercase text-center xl:text-start">
                   MASTER
                 </h2>
@@ -372,13 +379,6 @@ function HomeClient() {
                 </p>
                 <p className="text-[#FE4855] text-[30px] md:text-[50px] font-[400] md:font-semibold uppercase text-center xl:text-start">
                   WITH AI
-                </p>
-                <p className="text-[#ffffff] text-[18px] mb-4 text-center xl:text-start">
-                  <strong className="font-[700] md:text-[24px] underline">
-                    2025
-                  </strong>{" "}
-                  will be about AI-Powered{" "}
-                  <br className="sm:hidden block" /> Digital Marketing
                 </p>
 
                 <div className="md:block hidden mt-8">
@@ -577,8 +577,8 @@ function HomeClient() {
         <section className="my-[30px] md:my-[50px]">
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-3 md:px-6">
             <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 md:gap-10">
-              <div className="flex flex-col justify-center items-center mt-[20px] sm:mt-[40px] lg:mt-1 bg-[#F9F7FF] md:order-1 order-2 pt-5 sm:pt-8">
-                <div className="bg-white rounded-xl p-5 shadow-lg max-[640px]:w-[90%] text-center">
+              <div className="relative flex flex-col items-center justify-center mt-[20px] sm:mt-[40px] lg:mt-1 bg-[#F9F7FF] md:order-1 order-2 pt-5 sm:pt-8">
+                <div className="bg-white rounded-xl p-5 shadow-lg max-[640px]:w-[90%] text-center relative z-10">
                   <div className="flex gap-2 justify-center">
                     <div className="px-2 flex items-center justify-center bg-black rounded-[100%]">
                       <Image
@@ -601,14 +601,20 @@ function HomeClient() {
                     Trained | Hired | Ahead
                   </p>
                 </div>
-                <div className="flex justify-center w-[100%] xl:w-[80%]">
+                <div className="relative w-full xl:w-[80%] mt-5 max-[640px]:-mt-8">
                   <Image
-                    src="/img/attachment.svg"
+                    src="/img/formimage.png"
                     alt="Digital Marketing Courses in Bangalore"
-                    className="max-[1024px]:w-[60%] max-[1300px]:w-[80%]"
+                    className="w-full h-auto"
                     width={400}
                     height={300}
                   />
+                  <span className="absolute bottom-[20%] left-[3%] bg-black text-white text-[11px] md:text-[13px] font-semibold px-3 py-1.5 rounded-full shadow-md">
+                    No Experience Needed
+                  </span>
+                  <span className="absolute bottom-[5%] right-[3%] bg-black text-white text-[11px] md:text-[13px] font-semibold px-3 py-1.5 rounded-full shadow-md">
+                    No Coding Involved
+                  </span>
                 </div>
               </div>
 
@@ -987,7 +993,8 @@ function HomeClient() {
           <div className="container min-[1440px]:max-w-[1440px] mx-auto px-8 md:px-4">
             <p className="font-bold text-[26px] md:text-[32px] max-[640px]:pr-2">
               Frequently Asked Questions (FAQs)
-            </p>
+            </p> <br />
+            <p>The Definitive Guide to the Best Digital Marketing Course in India (2026)</p>
 
             <Accordion items={accardiancontentfaq} />
           </div>

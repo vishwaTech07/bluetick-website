@@ -62,13 +62,13 @@ export default function Testimonials() {
             priority
           />
 
-          <div className="p-5 flex flex-col h-full">
-            <h5 className="mb-3 text-[18px] md:text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+          <div className="p-5 flex flex-col h-full ">
+            <h5 className="mb-3 text-[18px] md:text-lg font-bold tracking-tight text-gray-900 dark:text-black text-center">
               {item.title}
             </h5>
 
             {item.stats ? (
-              <ul className="list-disc pl-4 md:pl-6 flex justify-between gap-4">
+              <ul className="list-disc pl-4 md:pl-6 flex justify-between gap-4 text-center">
                 {item.stats.map((stat, i) => (
                   <li key={i} className="marker:text-blue-500 marker:text-[25px] text-[13px] md:text-sm">
                     <strong className="text-base">{stat.value}</strong>

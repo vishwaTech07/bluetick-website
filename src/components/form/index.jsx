@@ -198,7 +198,7 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
               <option value="">Select Center</option>
               <option>Bannerghatta Road</option>
               <option>Indiranagar (Besides Metro Station)</option>
-              <option>Ramamurthy Nagar Junction on Outer Ring Road</option>
+              <option>Hoodi (Near Junction)</option>
             </select>
             {errors.center && <p className="text-red-500 text-sm">{errors.center}</p>}
           </div>
