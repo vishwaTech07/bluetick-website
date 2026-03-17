@@ -200,7 +200,7 @@ function Footer({ formType, setFormType }) {
         {/* ---------- BOTTOM COPYRIGHT ---------- */}
         <div className="text-center text-white">
           <p className="text-[12px] md:text-[16px] py-3">
-            © {new Date().getFullYear()git } BlueTick Academy. All Rights Reserved.
+            © {new Date().getFullYear() } BlueTick Academy. All Rights Reserved.
           </p>
 
           <div className="flex gap-5 justify-center text-sm md:text-lg font-[600]">
