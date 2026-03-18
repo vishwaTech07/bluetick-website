@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    img: "/img/testimonial.svg",
+    img: "/img/JobSecure.jpeg",
     title: "100% Job Guaranteed Program",
     stats: [
       { label: "Avg CTC", value: "4.5 LPA" },
@@ -12,7 +12,7 @@ const testimonials = [
     alt: "Digital Marketing Course",
   },
   {
-    img: "/img/testimonial_1.svg",
+    img: "/img/global_certifications.jpeg",
     title: (
       <>
         15<span className="text-red-500">+</span> Global Certifications
@@ -23,7 +23,7 @@ const testimonials = [
     alt: "Digital marketing training institute in Bangalore",
   },
   {
-    img: "/img/testimonial_2.svg",
+    img: "/img/access_to_premium.jpeg",
     title: (
       <>
         Access to Premium 50<span className="text-red-500">+</span> AI Tools
@@ -34,7 +34,7 @@ const testimonials = [
     alt: "Best digital marketing training institute in Bangalore",
   },
   {
-    img: "/img/testimonial_3.svg",
+    img: "/img/expert_trainers_from_Industries.jpeg",
     title: "Expert Trainers from Industries",
     description: (
       <>
@@ -42,6 +42,16 @@ const testimonials = [
       </>
     ),
     alt: "Digital marketing training in Bangalore",
+  },
+  {
+    img: "/img/professional_certification.jpeg",
+    title: "Professional Certification Program in Digital Marketing & Analytics",
+    alt: "Professional Certification Program in Digital Marketing & Analytics",
+  },
+  {
+    img: "/img/post_graduate_program.jpeg",
+    title: "Post Graduate Program in Digital Marketing & Analytics",
+    alt: "Post Graduate Program in Digital Marketing & Analytics",
   },
 ];
 
@@ -67,7 +77,7 @@ export default function Testimonials() {
               {item.title}
             </h5>
 
-            {item.stats ? (
+            {(item.stats && item.stats.length > 0) ? (
               <ul className="list-disc pl-4 md:pl-6 flex justify-between gap-4 text-center">
                 {item.stats.map((stat, i) => (
                   <li key={i} className="marker:text-blue-500 marker:text-[25px] text-[13px] md:text-sm">
@@ -78,11 +88,11 @@ export default function Testimonials() {
                 ))}
               </ul>
             ) : (
-              <ul className="list-disc pl-4 md:pl-6 flex justify-between gap-4">
+              item.description ? <ul className="list-disc pl-4 md:pl-6 flex justify-between gap-4">
                 <li className="marker:text-blue-500 marker:text-[25px] text-[14px] md:text-sm">
                   {item.description}
                 </li>
-              </ul>
+              </ul> : null
             )}
 
             {item.note && (
