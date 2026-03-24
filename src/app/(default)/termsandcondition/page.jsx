@@ -49,7 +49,7 @@ export default function TermsAndConditions() {
             </h1>
 
             <p className="mt-4 text-sm sm:text-base">
-              Welcome to <strong>Blue Tick Academy</strong> ("we," "our," or
+              <strong>BlueTick AI Academy</strong> is owned and operated by Tech Tree ("we," "our," or
               "us"). By accessing or using our website{" "}
               <a href="https://bluetickacademy.com" className="text-blue-500 underline">
                 https://bluetickacademy.com
@@ -68,7 +68,7 @@ export default function TermsAndConditions() {
               </li>
               <li>
                 <strong>"Services"</strong> refer to all courses, training
-                programs, and related offerings provided by Blue Tick Academy.
+                programs, and related offerings provided by BlueTick Academy.
               </li>
               <li>
                 <strong>"Website"</strong> refers to{" "}
@@ -119,7 +119,7 @@ export default function TermsAndConditions() {
 
             <h2 className="text-lg sm:text-xl font-semibold mt-6">6. Intellectual Property</h2>
             <p className="text-sm sm:text-base">
-              All content and course materials belong to Blue Tick Academy and are
+              All content and course materials belong to BlueTick Academy and are
               copyright protected.
             </p>
 
@@ -171,7 +171,7 @@ export default function TermsAndConditions() {
             <h2 className="text-lg sm:text-xl font-semibold mt-6">14. Contact Us</h2>
             <p className="text-sm sm:text-base">For queries:</p>
 
-            <p className="font-semibold text-sm sm:text-base">Blue Tick Academy</p>
+            <p className="font-semibold text-sm sm:text-base">BlueTick AI Academy</p>
             <p className="text-sm sm:text-base">
               No.545, 2nd Floor, CMH Road, Indiranagar Stage 2, Bangalore - 560038
             </p>

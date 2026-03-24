@@ -42,7 +42,7 @@ export default function PrivacyPolicy() {
                             Privacy Policy - {new Date().getFullYear()}
                         </h1>
                         <p className="text-sm md:text-base lg:text-lg text-center mb-6">
-                            Bluetick Academy owned and operated by Tech Tree ("we," "our," or "us") respects your privacy and is committed to protecting it through this Privacy Policy.
+                            Bluetick AI Academy owned and operated by Tech Tree ("we," "our," or "us") respects your privacy and is committed to protecting it through this Privacy Policy.
                         </p>
                         <div className="max-w-3xl mx-auto">
                             <section className="mb-6">

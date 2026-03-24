@@ -406,7 +406,7 @@ export const Student1 = [
     name: "Harini Pandiaraj",
     img: Pho3,
     company: Amazon,
-    des: "Blue tick helped me understand how actually works. I learned SEO, Google Ads, and social media marketing from scratch. The live projects were most important of all. Thanks to the trainers.",
+    des: "BlueTick helped me understand how actually works. I learned SEO, Google Ads, and social media marketing from scratch. The live projects were most important of all. Thanks to the trainers.",
   },
   {
     id: 2,
