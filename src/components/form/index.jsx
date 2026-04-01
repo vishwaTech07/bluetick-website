@@ -196,9 +196,9 @@ export default function LearningAdvisorForm({ formType, setFormType }) {
               className="outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
             >
               <option value="">Select Center</option>
-              <option>Bannerghatta Road</option>
               <option>Indiranagar (Besides Metro Station)</option>
               <option>Hoodi (Near Junction)</option>
+              <option>Bannerghatta Road</option>
             </select>
             {errors.center && <p className="text-red-500 text-sm">{errors.center}</p>}
           </div>
