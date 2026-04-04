@@ -43,16 +43,7 @@ const testimonials = [
     ),
     alt: "Digital marketing training in Bangalore",
   },
-  {
-    img: "/img/professional_certification.jpeg",
-    title: "Professional Certification Program in Digital Marketing & Analytics",
-    alt: "Professional Certification Program in Digital Marketing & Analytics",
-  },
-  {
-    img: "/img/post_graduate_program.jpeg",
-    title: "Post Graduate Program in Digital Marketing & Analytics",
-    alt: "Post Graduate Program in Digital Marketing & Analytics",
-  },
+
 ];
 
 export default function Testimonials() {

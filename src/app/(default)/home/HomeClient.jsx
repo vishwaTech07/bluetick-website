@@ -70,7 +70,7 @@ const allCards = [
     id: 3,
     name: "Harini Pandiaraj",
     img: "/img/photo/3.jpg",
-    company: "/amazon.png",
+    company: "img/amazon.png",
     des: "BlueTick helped me understand how actually works. I learned SEO, Google Ads, and social media marketing from scratch. The live projects were most important of all. Thanks to the trainers.",
   },
   {
@@ -170,7 +170,7 @@ const courses = [
     id: 1,
     title: "Professional Certification Program in Digital Marketing & Analytics",
     duration: "3 Months   |   Weekdays & Weekends",
-    img: "/img/course.svg",
+    img: "/img/professional_certification.jpeg",
     list_1: "7 Courses in 1 program",
     list_2: "20+ Tools with AI and 15+ live Projects",
     list_3: "12+ Certifications",
@@ -179,7 +179,7 @@ const courses = [
     id: 2,
     title: "Post Graduate Program in Digital Marketing & Analytics",
     duration: "4.5 Months   |   Weekdays & Weekends",
-    img: "/img/course_2.svg",
+    img: "/img/post_graduate_program.jpeg",
     list_1: "15 Courses in 1 program",
     list_2: "60+ Tools with AI and 25+ live Projects",
     list_3: "Guaranteed Job",
@@ -552,7 +552,7 @@ function HomeClient() {
               "dream11.png",
               "curekit.png",
               "cognizent.png",
-              "amazon.png",
+              "amazons.png",
               "adobe.png",
               "uber.png",
               "swiggy.jpg",
@@ -680,13 +680,13 @@ function HomeClient() {
                   key={item.id}
                   className="bg-white border border-gray-200 rounded-lg shadow-sm mx-auto max-w-[550px] max-[768px]:w-[100%]"
                 >
-                  <div className="bg-[#B2E1FE] flex justify-center w-full">
+                  <div className="relative w-full h-[150px] md:h-[200px] overflow-hidden rounded-t-lg bg-[#B2E1FE]">
                     <Image
-                      className="rounded-t-lg h-[150px] md:h-[200px]"
+                      className="object-cover object-center"
                       src={item.img}
-                      alt="no-course"
-                      width={400}
-                      height={200}
+                      alt={item.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 550px"
                     />
                   </div>
                   <div className="p-5">
